@@ -1,0 +1,29 @@
+CREATE TABLE products(
+    id_product INT PRIMARY KEY,
+    type TEXT,
+    brand TEXT,
+    model TEXT,
+    unit_price REAL,
+    specifications TEXT
+);
+
+CREATE TABLE customers(
+    rut_customer TEXT PRIMARY KEY,
+    name_customer TEXT,
+    address TEXT,
+    phone TEXT,
+    email TEXT
+);
+
+
+CREATE TABLE purchase(
+    id_purchase INTEGER PRIMARY KEY,
+    rut_customer TEXT,
+    id_product INTEGER,
+    cant INTEGER,
+    total REAL,
+    FOREIGN KEY (rut_customer) REFERENCES customers(rut_customer ),
+    FOREIGN KEY (id_product) REFERENCES products(id_product )
+);
+
+
