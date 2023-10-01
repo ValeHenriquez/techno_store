@@ -1,4 +1,4 @@
-package fuentes_henriquez_zazzali;
+package fuentes_henriquez_zazzali.Domain;
 
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;

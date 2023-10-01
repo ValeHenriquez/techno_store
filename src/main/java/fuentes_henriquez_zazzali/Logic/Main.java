@@ -1,6 +1,8 @@
-package fuentes_henriquez_zazzali;
+package fuentes_henriquez_zazzali.Logic;
 
 import java.sql.Connection;
+
+import fuentes_henriquez_zazzali.Domain.Database;
 
 public class Main {
 
