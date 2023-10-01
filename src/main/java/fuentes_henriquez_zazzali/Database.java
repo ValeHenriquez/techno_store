@@ -10,7 +10,6 @@ public class Database {
 
     private Connection connection;    
 
-
     public Database() {
         String url = "jdbc:sqlite:store.db";
 
@@ -27,11 +26,9 @@ public class Database {
         }
     }
 
-
     public Connection getConnection() {
         return connection;
     }
-
 
     public void setConnection(Connection connection) {
         this.connection = connection;
