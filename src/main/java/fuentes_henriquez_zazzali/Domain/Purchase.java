@@ -1,13 +1,16 @@
 package fuentes_henriquez_zazzali.Domain;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class Purchase {
+    private String id;
     private Cliente cliente;
     private ArrayList<UniqueProduct> products;
     private double total;
 
     public Purchase(Cliente cliente, ArrayList<UniqueProduct> products) {
+        this.id = UUID.randomUUID().toString();
         this.cliente = cliente;
         this.products = products;
         this.total = 0;
@@ -39,6 +42,14 @@ public class Purchase {
 
     public void setTotal(double total) {
         this.total = total;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
 }
