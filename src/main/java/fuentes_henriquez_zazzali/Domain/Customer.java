@@ -1,6 +1,6 @@
 package fuentes_henriquez_zazzali.Domain;
 
-public class Cliente {
+public class Customer {
     private String rut;
     private String name;
     private String lastName;
@@ -9,7 +9,7 @@ public class Cliente {
     private String email;
     private int cantPurchases;
 
-    public Cliente(String rut, String name, String lastName, String address, String phone, String email) {
+    public Customer(String rut, String name, String lastName, String address, String phone, String email) {
         this.rut = rut;
         this.name = name;
         this.lastName = lastName;

@@ -5,27 +5,27 @@ import java.util.UUID;
 
 public class Purchase {
     private String id;
-    private Cliente cliente;
+    private Customer customer;
     private ArrayList<UniqueProduct> products;
     private double total;
 
-    public Purchase(Cliente cliente, ArrayList<UniqueProduct> products) {
+    public Purchase(Customer customer, ArrayList<UniqueProduct> products) {
         this.id = UUID.randomUUID().toString();
-        this.cliente = cliente;
+        this.customer = customer;
         this.products = products;
         this.total = 0;
         for (UniqueProduct product : products) {
             this.total += product.getProduct().getPrice();
         }
-        cliente.setCantPurchases(cliente.getCantPurchases() + 1);
+        customer.setCantPurchases(customer.getCantPurchases() + 1);
     }
 
-    public Cliente getCliente() {
-        return cliente;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     public ArrayList<UniqueProduct> getProducts() {
